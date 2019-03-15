@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    
+    function upDate(previewPic){
+    /* In this function you should 
+    1) change the url for the background image of the div with the id = "image" 
+    to the source file of the preview image
+    
+    2) Change the text  of the div with the id = "image" 
+    to the alt text of the preview image 
+    */
+        document.getElementById("image").style.backgroundImage = "url(" + previewPic.src + ")";
+        document.getElementById("image").innerHTML = previewPic.alt;
+
+    }
+
+    function unDo(){
+     /* In this function you should 
+    1) Update the url for the background image of the div with the id = "image" 
+    back to the orginal-image.  You can use the css code to see what that original URL was
+    
+    2) Change the text  of the div with the id = "image" 
+    back to the original text.  You can use the html code to see what that original text was
+    */
+        document.getElementById("image").style.backgroundImage = "initial";
+        document.getElementById("image").innerHTML = "Hover or tab over/into an image below.";
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            alt = "Golden Gate Bridge" 
+            src = "http://www.tracydeephotography.com/wp-content/uploads/the-importance-of-lines-in-graphy-an-overview-with-superb-vertical-photography.jpg"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" 
+            alt = "Fluffy dog" 
+            src = "http://cdn.litlepups.net/2016/02/19/cute-fluffy-dog-jokeroo.jpg"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://upload.wikimedia.org/wikipedia/commons/3/39/Sunflower_Helianthus_1_edited.png" 
+            alt = "Sunflower"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+
+        <img class = "preview" tabindex = "1" 
+            src = "http://www.inspirationde.com/wp-content/uploads/2015/02/sara-smiles-iamsirmatthew-nature-photography-vertical-1423147227g8n4k.jpg" 
+            alt = "Bagpacker"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+
+        <img class = "preview" tabindex = "1" 
+            src = "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg" 
+            alt = "Cute Puppy"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+
+        <img class = "preview" tabindex = "1" 
+            src = "https://i2.wp.com/i.livescience.com/images/i/000/063/140/i02/baako-baby-gorilla.jpeg" 
+            alt = "Gorillas"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()">
+</body>
+</html>
+    
